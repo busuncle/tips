@@ -1,0 +1,14 @@
+** start with gnome **
+create and edit the file "~/.config/autostart/fcitx.desktop", add the following lines
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/fcitx
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[zh_CN]=fcitx
+Name=fcitx
+Comment[zh_CN]=
+Comment=
+
+the "Exec" field depends on your fcitx installation, and here is default for "apt-get install"
