@@ -1,5 +1,18 @@
 ** don't wanna enter password everytime when using ssh to connect a remote server? **
 1) edit your "~/.ssh/config", add 2 lines at the head of it:
+---
 ControlMaster auto
 ControlPath /tmp/ssh_mux_%h_%p_%r
+---
 and then you only need to enter your password at the first time you want to connect your server
+
+
+** common login user config **
+1) edit your "~/.ssh/config", add every host like this:
+---
+Host ud
+HostName 127.0.0.1
+Port 22
+IdentityFile /home/yourname/.ssh/some_of_your_priv_key_name.pri
+---
+"Host" is the shortcut you define, "HostName" is the ip or server_name, "IdentityFile" may be different each other when you need to login different server, and you can specify it here
