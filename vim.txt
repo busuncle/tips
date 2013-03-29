@@ -1,4 +1,4 @@
-**how to change encoding when opening a file**
+** how to change encoding when opening a file **
 1) vim -c "e ++enc=utf8" filename
 2) or, after the file has been opened, input ":e ++enc=utf8"
 
