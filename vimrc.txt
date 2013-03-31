@@ -1,0 +1,39 @@
+set nocompatible
+set number
+set wrap!
+filetype on
+set history=50
+filetype plugin on
+set background=dark
+colorscheme elflord
+syntax on
+"set cursorline
+set autoindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set showcmd
+set showmode
+set showmatch
+set vb t_vb=
+set ruler
+set hls
+set incsearch
+set cin
+set mouse=a
+set cindent
+set sm
+set ai
+"set enc=utf-8
+"set fenc=utf-8
+"set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+"if version > 603
+"set helplang=cn
+"endi
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
+set tags+=~/.vim/stltags
+set completeopt=longest,menu
+autocmd FileType python setlocal et sta sw=4 sts=4
