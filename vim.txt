@@ -2,3 +2,16 @@
 1) vim -c "e ++enc=utf8" filename
 2) or, after the file has been opened, input ":e ++enc=utf8"
 
+** set custom filetypedetect **
+1) open your "~/.vim/filetype.vim" file, add the following lines:
+### begin ###
+if exists("did_load_filetypes")
+  finish
+endif
+let did_load_filetypes_userafter = 1
+augroup filetypedetect
+    au BufNewFile,BufRead *.pat setf htmldjango
+augroup END
+### end ###
+the example here means open all "*.pat" files as "htmldjango" file(a html pattern file type)
+
