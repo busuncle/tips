@@ -1,0 +1,5 @@
+** all actions in awk should be quoted in single quotation, not double quotation **
+eg.print the pid of the last 3 processes
+we have: ps aux | tail -n 3 | awk '{print $2}', it works well as you expect
+but do not input: ps aux | tail -n 3 | awk "{print $2}", it does not work at all
+remember it's '{print $2}' not "{print $2}"
