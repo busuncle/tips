@@ -1,0 +1,20 @@
+** how to grant **
+very easy example:
+### begin ###
+grant select,insert,update,delete on db_name.* to db_user@'127.0.0.1' identified by 'your_password';
+flush privileges;
+### end ###
+
+
+** dump and load .sql file **
+dump example:
+### begin ###
+in console, enter:
+mysqldump [--no-data] -u root -p db_name [table_name, table_name2, ...] > your_dump_file.sql
+### end ###
+load example:
+### begin ###
+in mysql client, enter:
+source your_dump_file_path
+### end ###
+
