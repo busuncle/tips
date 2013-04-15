@@ -6,16 +6,16 @@ RSYNC_ENABLE=true
 ### end ###
 3) open and edit the config file, here is an example:
 ### begin ###
-log file=/var/log/rsyncd.log    # log file path
-port=8873   # you can set user-defined port here, usually beyound 1024
+log file=/var/log/rsyncd.log    
+port=8873   
 
 [tmp]
 comment = write down your description about this rsync folder
-path = /home/busuncle/tmp/  # the folder that can be access("r" or "rw" depending on your "read only" option below)
-hosts allow = 127.0.0.1 127.0.0.2   # ip list that you allow to access the folder, seperated by a blank 
-uid = nobody    # change the user as you wish
-gid = nogroup   # the group
-read only = true    # or false
+path = /home/busuncle/tmp/  
+hosts allow = 127.0.0.1 127.0.0.2   
+uid = nobody    
+gid = nogroup   
+read only = true    
 ### end ###
 and then, on your local machine(also have rsync installed), type command like this:
 ### begin ###
