@@ -2,6 +2,8 @@
 1) vim -c "e ++enc=utf8" filename
 2) or, after the file has been opened, input ":e ++enc=utf8"
 
+
+
 ** set custom filetypedetect **
 1) open your "~/.vim/filetype.vim" file, add the following lines:
 ### begin ###

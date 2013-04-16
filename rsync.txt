@@ -17,13 +17,16 @@ uid = nobody
 gid = nogroup   
 read only = true    
 ### end ###
+
 and then, on your local machine(also have rsync installed), type command like this:
 ### begin ###
 rsync --port 8873 -av /home/busuncle/source_folder your_rsync_daemon_machine_ip::tmp/
 ### end ###
+
 this will transfer your source_folder files to your rsync machine in corresponding directory, 
 or you may change the rsync transfer direction by shifting the source and destination like this:
 ### begin ###
 rsync --port 8873 -av your_rsync_daemon_machine_ip::tmp/ /home/busuncle/destination_folder/
 ### end ###
+
 pay attention to the tailing "/", or that may destroy your folder ...

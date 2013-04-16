@@ -7,6 +7,7 @@ ControlPath /tmp/ssh_mux_%h_%p_%r
 and then you only need to enter your password at the first time you want to connect your server
 
 
+
 ** common login user config **
 1) edit your "~/.ssh/config", add every host like this:
 ### begin ###

@@ -6,12 +6,25 @@ flush privileges;
 ### end ###
 
 
+
+** connect local db **
+1) edit "~/.my.cnf", add:
+### begin ###
+[client]
+password="yourpasswordhere"
+### end ###
+and then you can use the command "mysql -u username db_name" to connect your *local* db.
+ps: you can use "chmod 600 ~/.my.cnf" to protect your password
+
+
+
 ** dump and load .sql file **
 dump example:
 ### begin ###
 in console, enter:
 mysqldump [--no-data] -u root -p db_name [table_name, table_name2, ...] > your_dump_file.sql
 ### end ###
+
 load example:
 ### begin ###
 in mysql client, enter:
