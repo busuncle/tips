@@ -1,0 +1,6 @@
+** make symblic link to some file **
+eg. "ln -s a.txt b.txt" means to create a symblic file named "b.txt" linked to "a.txt"
+you can check it by "ls -alh b.txt", to see that:
+lrwxrwxrwx 1 busuncle busuncle 5 2013-04-18 10:53 b.txt -> a.txt
+modifying both files will do the same thing to each other
+
