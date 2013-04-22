@@ -3,5 +3,5 @@
 this will recursively search "/somepath/" for "helloworld.py"
 
 some other useful command combination:
-"find ./ -name "*.py" | xargs cat | wc -l"
-this will find all the py files in current directory and count the lines
+"find ./ -name '*.py' | xargs cat | wc -l"
+this will find all the py files in current directory and count the total lines
