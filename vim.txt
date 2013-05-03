@@ -17,3 +17,8 @@ augroup END
 ### end ###
 the example here means open all "*.pat" files as "htmldjango" file(a html pattern file type)
 
+
+
+** change filetype on opened file **
+set filetype=***
+eg. "set filetype=python", or "set filetype=javascript"
