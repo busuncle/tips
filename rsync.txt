@@ -30,3 +30,16 @@ rsync --port 8873 -av your_rsync_daemon_machine_ip::tmp/ /home/busuncle/destinat
 ### end ###
 
 pay attention to the tailing "/", or that may destroy your folder ...
+
+
+
+** when using username and password **
+create a password file and change it's mode to 600
+### begin ###
+touch pw.txt
+echo "yourpassword" > pw.txt
+chmod 600 pw.txt
+
+rsync -av --port=8730 --password-file='pw.txt' yourfile username@hostname_or_ip::folder_name/
+### end ###
+
