@@ -4,3 +4,11 @@ you can check it by "ls -alh b.txt", to see that:
 lrwxrwxrwx 1 busuncle busuncle 5 2013-04-18 10:53 b.txt -> a.txt
 modifying both files will do the same thing to each other
 
+
+
+** run a command as another user only once **
+eg. Suppose you are root now, type this:
+### begin ###
+su -l busuncle -c "touch abc.txt"
+### end ###
+you will see that "abc.txt" is created by busuncle, but you are still logined as root
