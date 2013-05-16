@@ -1,0 +1,11 @@
+** send mail to external mail address **
+1.config exim4
+### begin ###
+dpkg-reconfigure exim4-config
+go through the options, notice that one ask you whether split the config files, select "no"
+### end ###
+2.edit /etc/aliases, add some mapping like:
+### begin ###
+root: busuncle@somehost.com
+### end ###
+
