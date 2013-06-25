@@ -3,3 +3,9 @@ eg.print the pid of the last 3 processes
 we have: ps aux | tail -n 3 | awk '{print $2}', it works well as you expect
 but do not input: ps aux | tail -n 3 | awk "{print $2}", it does not work at all
 remember it's '{print $2}' not "{print $2}"
+
+
+
+** use -F to specify the field-separator **
+eg. awk -F"\t" '{if ($1==0} print $2;}'
+this command will print the second field of every line from stdin if the first field is equal to 0
