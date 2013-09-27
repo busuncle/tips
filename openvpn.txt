@@ -1,2 +1,6 @@
 ** default start from /etc/init.d/openvpn **
-/usr/sbin/openvpn --writepid /var/run/openvpn.client.pid --daemon ovpn-client --status /var/run/openvpn.client.status 10 --cd /etc/openvpn --config /etc/openvpn/client.conf --script-security 2
+### begin ###
+sudo /usr/sbin/openvpn --writepid /var/run/openvpn.client.pid --daemon ovpn-client --status /var/run/openvpn.client.status 10 --cd /etc/openvpn --config /etc/openvpn/client.conf --script-security 2
+### end ###
+change "--config" param if necessary
+
