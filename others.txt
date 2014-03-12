@@ -12,3 +12,9 @@ eg. Suppose you are root now, type this:
 su -l busuncle -c "touch abc.txt"
 ### end ###
 you will see that "abc.txt" is created by busuncle, but you are still logined as root
+
+
+** nohup **
+eg.very easy:
+nohup python test_nohup.py > nohup.out 2>&1 &
+
