@@ -1,0 +1,16 @@
+** distibuted lock pattern **
+eg.fake code here:
+lock = 0
+# aquire lock
+current_timestamp = now()
+while lock != 1:
+	timestamp = current_timestamp + lock_timemout + 1
+	lock = SETNX lock.foo timestamp
+	if lock == 1 or (now() > (GET lock.foo) and now() > (GETSET lock.foo timestamp)):
+		break;
+	else:
+		sleep(10ms)
+do_some_job()
+# release lock
+if now() < GET lock.foo:
+	DEL lock.foo
