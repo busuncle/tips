@@ -18,3 +18,10 @@ you will see that "abc.txt" is created by busuncle, but you are still logined as
 eg.very easy:
 nohup python test_nohup.py > nohup.out 2>&1 &
 
+
+** write portable hd in mac **
+diskuti info /Volumes/your_portable_hd_name | grep "Device Node" # remember the result
+hdiutil eject /Volumes/your_portable_hd_name 
+sudo mkdir /Volumes/myhd
+sudo mount_ntfs -o rw,nobrowse the_result_in_fisrt_step /Volumes/myhd
+then you can cd /Volumes/myhd and read+write on it
