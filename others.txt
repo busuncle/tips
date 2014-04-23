@@ -25,3 +25,21 @@ hdiutil eject /Volumes/your_portable_hd_name
 sudo mkdir /Volumes/myhd
 sudo mount_ntfs -o rw,nobrowse the_result_in_fisrt_step /Volumes/myhd
 then you can cd /Volumes/myhd and read+write on it
+
+
+** logrotate example **
+open a file /etc/logrotate.d/nginx and write in:
+/usr/local/openresty/nginx/logs/access.log {
+	daily
+	rotate 30
+	missingok
+	notifempty
+	sharedscripts
+	postrotate
+		if [ -f /usr/local/openresty/nginx/logs/nginx.pid ]; then
+			kill -USR1 `cat /usr/local/openresty/nginx/logs/nginx.pid`
+		fi
+	endscript
+}
+then exec logrotate:
+$/usr/bin/logrotate -f /etc/logrotate.d/nginx
