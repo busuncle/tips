@@ -43,3 +43,7 @@ open a file /etc/logrotate.d/nginx and write in:
 }
 then exec logrotate:
 $/usr/bin/logrotate -f /etc/logrotate.d/nginx
+
+
+** remove grep match file **
+grep "some string" *.txt | cut -d ":" -f 1 | xargs rm
