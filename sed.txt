@@ -1,0 +1,6 @@
+** get regular-expression-match fields **
+consider a file containing lines like this:
+[2014-04-27 00:00:00]id=19870427, name=busuncle
+we want to get "2014-04-27 00:00:00,19870427,busuncle", simply use sed:
+sed -E "s/\[([^]]+)\]id=([0-9]+), name=([a-z]+)/\1,\2,\3/g" file.txt
+
