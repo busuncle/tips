@@ -1,0 +1,8 @@
+** use egrep to match multi words **
+consider a file:
+name=paul,age=20
+name=kevin,age=21
+name=james,age=22
+name=wade,age=24
+and we only want kevin and wade, simply use egrep like this:
+egrep "name=(kevin|wade)" file.txt
