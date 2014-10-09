@@ -2,6 +2,7 @@
 very easy example:
 ### begin ###
 grant select,insert,update,delete on db_name.* to db_user@'127.0.0.1' identified by 'your_password';
+grant all privileges on db_name.* to db_user@'localhost' identified by 'your_password';
 flush privileges;
 ### end ###
 
