@@ -43,3 +43,8 @@ chmod 600 pw.txt
 rsync -av --port=8730 --password-file='pw.txt' yourfile username@hostname_or_ip::folder_name/
 ### end ###
 
+** use RSYNC_PASSWORD **
+### begin ###
+export RSYNC_PASSWORD=your_password_here
+rsync --port 8724 --list-only username@123.123.123.123::dirname/
+### end ###
