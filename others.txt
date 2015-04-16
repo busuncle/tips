@@ -47,3 +47,10 @@ $/usr/bin/logrotate -f /etc/logrotate.d/nginx
 
 ** remove grep match file **
 grep "some string" *.txt | cut -d ":" -f 1 | xargs rm
+
+
+** add new nginx log **
+add this in nginx.conf:
+error_log logs/info.log info;
+then you can use info log in ngx_lua:
+ngx.log(ngx.INFO, "your log info here")
