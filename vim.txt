@@ -22,3 +22,10 @@ the example here means open all "*.pat" files as "htmldjango" file(a html patter
 ** change filetype on opened file **
 set filetype=***
 eg. "set filetype=python", or "set filetype=javascript"
+
+
+
+** use re **
+<key>frame</key><string>{{123,234},{345,456}}</string>
+:%s/<key>frame<\/key><string>{{\(\d*\),\(\d*\)},{\(\d*\),\(\d*\)}}<\/string>/"frame":{"x":\1,"y":\2,"w":\3,"h":\4},/g
+"frame":{"x":123,"y":234,"w":345,"h":456}
