@@ -1,0 +1,30 @@
+# sudo apt-get update
+# sudo apt-get install python-dev build-essential 
+
+# sudo apt-get install python-pip
+
+# pip install --upgrade pip
+
+# pip install <package>
+
+# pip install package==1.5
+# pip install package>=1.5
+
+# pip install --upgrade <package>
+
+# pip uninstall <package>
+
+# pip search <search query>
+
+# pip show pytz
+---
+Metadata-Version: 1.1
+Name: pytz
+Version: 2013.7
+Summary: World timezone definitions, modern and historical
+Home-page: http://pythonhosted.org/pytz
+Author: Stuart Bishop
+Author-email: stuart@stuartbishop.net
+License: MIT
+
+# pip list
