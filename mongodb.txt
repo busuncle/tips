@@ -1,3 +1,12 @@
+** auth cmd **
+mongo 127.0.0.1:27071/db_test -u root -p root_password
+>use db_test
+>db.createUser({user: "test_user", pwd: "abcd1234", roles: [{role: "readWrite", db: "db_test"}]})
+then you can use:
+mongo 127.0.0.1:27071/db_test -u test_user -p abcd1234
+
+
+** usage example **
 > use test
 switched to db test
 > show dbs
