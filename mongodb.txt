@@ -44,3 +44,10 @@ test    0.203125GB
 > db.user.find({}, {id: 1}).sort({"id": -1}).limit(2)
 { "_id" : ObjectId("565fed7454d13a69b5b735e3"), "id" : 5 }
 { "_id" : ObjectId("565fed6c54d13a69b5b735e2"), "id" : 4 }
+
+** usage example2 **
+db.id_inc.findAndModify({"query": {"name": "user"}, "update": {$set: {"id": 10000}}, "new": true})
+db.id_inc.drop()
+db.id_inc.insert({"name": "user", "id": 10000})
+db.account.insert({"urs": "busuncle@163.com", "account_id": 1, "user_id_list": []})
+db.account.update({"account_id": 1}, {"$push": {"user_id_list": 10001}})
