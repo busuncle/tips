@@ -1,11 +1,11 @@
 # 压缩
-tar -czf
+tar -czf db.tar.gz db
 
 # 解压
-tar -xzvf
+tar -xzvf db.tar.gz
 
 # 只解压某些文件
-tar -xzvf db/a.txt db/b.txt
+tar -xzvf db.tar.gz db/a.txt db/b.txt
 
 # 不解压看里面是否包含某些文件
 tar tvf db.tar.gz | egrep "a.txt|b.txt"
